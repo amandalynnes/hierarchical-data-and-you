@@ -4,6 +4,13 @@ Resources:
 
 https://django-mptt.readthedocs.io/en/latest/tutorial.html
 
+
+
+
+Project Explanation:
+
+This project is a simple Dropbox clone that will use MPTT models to enable the user to create folders and files that display in a visual tree-like structure.
+
  -->
 
 
