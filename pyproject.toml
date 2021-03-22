@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "hierarchical-data-and-you-amandalynnes"
+version = "0.1.0"
+description = "The goal of this assignment is to learn about this type of database and different ways of working with it. Build a simple Django server that uses MPTT models from django-mptt to create a Dropbox-esque web interface where you can create \"folders\" and \"files\" in an arbitrary structure and then display that structure. We won't actually be uploading anything, just making model instances and using them to represent real data. See the rubric for more detailed information. Submit as link to your repo on Github."
+authors = ["Amanda Simmons <carpe737diem@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^3.1.7"
+django-mptt = "^0.12.0"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.9.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

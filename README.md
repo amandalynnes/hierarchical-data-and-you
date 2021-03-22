@@ -1,3 +1,12 @@
+<!-- 
+
+Resources:
+
+https://django-mptt.readthedocs.io/en/latest/tutorial.html
+
+ -->
+
+
 # hierarchical-data-and-you
 
 Sometimes when categorizing data, there are potentially infinite ways that the data can be organized. For example, a file path for an operating system includes all the parent folders and the the location of the item itself, like this:
