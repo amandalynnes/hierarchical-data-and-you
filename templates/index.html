@@ -16,7 +16,15 @@
     {% for level in structure.closed_levels %}</li></ul>{% endfor %}
 {% endfor %}
 
+<p>-----------------------------------------------------------------------------------</p>
 
+    <h3>Upload Files Below</h3>
+    
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Upload">
+    </form>
 
 
 </body>
