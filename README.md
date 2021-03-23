@@ -6,11 +6,42 @@ https://django-mptt.readthedocs.io/en/latest/tutorial.html
 
 https://django-mptt.readthedocs.io/en/latest/templates.html#getting-started
 
+https://guides.github.com/features/wikis/
+
+Project name: Hierarchial Data and You!
 
 Project Explanation:
 
 This project is a simple Dropbox clone that will use MPTT models to enable the user to create folders and files that display in a visual tree-like structure.
 
+Added Bonus: The user can now submit file objects from the home page, no need to use the admin panel.
+
+Project Installation: 
+Step 1. The main page should be accessible out of the box, so head on over to this link -> http://http://127.0.0.1:8000/
+
+Step 2. Upload some files and prepare to experience the tree structure visually.
+
+Tip! If your files are all lining up equally you may not have created an children yet. 
+    a. Upload another file, 
+    b. this time select a 'parent' file from the dropdown menu (this will allow you to nest your new file object under it)
+
+Alright, you should now have your own shiny visual file tree.
+Well done :)
+
+
+Are you an admin and need access fast?
+Step 1. run this code in the terminal:
+    
+        poetry install
+        python manage.py createsuperuser
+        python manage.py runserver
+
+Step 2. navigate here to login with you createsuperuser credentials:
+
+        http://http://127.0.0.1:8000/admin
+
+Hope this was helpful, 
+"happy hacking".
  -->
 
 
