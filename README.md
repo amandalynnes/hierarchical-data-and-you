@@ -4,7 +4,7 @@ Resources:
 
 https://django-mptt.readthedocs.io/en/latest/tutorial.html
 
-
+https://django-mptt.readthedocs.io/en/latest/templates.html#getting-started
 
 
 Project Explanation:

@@ -1,0 +1,22 @@
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+</head>
+
+
+<body>
+    <h1>{{ heading }}</h1>
+    <p>-----------------------------------------------------------------------------------</p>
+
+    {% load mptt_tags %}
+    {% for file,structure in files|tree_info %}
+    {% if structure.new_level %}<ul><li>{% else %}</li><li>{% endif %}
+        {{ file.name }}
+    {% for level in structure.closed_levels %}</li></ul>{% endfor %}
+{% endfor %}
+
+
+
+
+</body>
