@@ -20,5 +20,5 @@ from tree import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index_view, name='homepage'),
-    path('addfile/', views.add_file, name='add_file'),
+    # path('addfile/', views.add_file, name='add_file'),
 ]

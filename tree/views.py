@@ -4,6 +4,15 @@ from .forms import FileForm
 
 def index_view(request):
     files = File.objects.all()
+    if request.method == 'POST':
+            form = FileForm(request.POST)
+            if form.is_valid():
+                data = form.cleaned_data
+                new_file = File.objects.create(
+                    name=data['name'],
+                    parent=data['parent'],
+                )
+                return HttpResponseRedirect(reverse('homepage'))
 
     form = FileForm()
     return render(request, 'index.html', {
@@ -12,18 +21,18 @@ def index_view(request):
         'form': form,
     })
 
-def add_file(request):
-    if request.method == 'POST':
-        form = FileForm(request.POST)
-        if form.is_valid():
-            data = form.cleaned_data
-            new_file = File.objects.create(
-                name=data['name'],
-                parent=data['parent'],
-            )
-            return HttpResponseRedirect(reverse('add_file', args=([new_file.id])))
+# def add_file(request):
+#     if request.method == 'POST':
+#         form = FileForm(request.POST)
+#         if form.is_valid():
+#             data = form.cleaned_data
+#             new_file = File.objects.create(
+#                 name=data['name'],
+#                 parent=data['parent'],
+#             )
+#             return HttpResponseRedirect(reverse('homepage'))
 
-    form = FileForm()
-    return render(request, 'index.html', {
-        'form': form,
-    })
+#     form = FileForm()
+#     return render(request, 'index.html', {
+#         'form': form,
+#     })
